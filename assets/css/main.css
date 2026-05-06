@@ -1202,3 +1202,118 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
+
+/*--------------------------------------------------------------
+# Theme Toggle (Dark Mode)
+--------------------------------------------------------------*/
+html.dark-theme {
+  --background-color: #1a1a2e;
+  --default-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --accent-color: #00d4ff;
+  --surface-color: #16213e;
+  --contrast-color: #ffffff;
+  --nav-color: #a8a9b4;
+  --nav-hover-color: #ffffff;
+  --nav-dropdown-background-color: #0f3460;
+  --nav-dropdown-color: #a8a9b4;
+  --nav-dropdown-hover-color: #ffffff;
+}
+
+html.dark-theme .light-background {
+  --background-color: #121228;
+  --surface-color: #1a1a3e;
+}
+
+html.dark-theme .dark-background {
+  --background-color: #0d0d1a;
+  --default-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --surface-color: #16213e;
+}
+
+html.dark-theme .header {
+  border-right-color: rgba(255, 255, 255, 0.1);
+}
+
+html.dark-theme .header .social-links a {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+html.dark-theme .resume .resume-item {
+  border-left-color: var(--accent-color);
+}
+
+html.dark-theme .resume .resume-item::before {
+  background: var(--background-color);
+  border-color: var(--accent-color);
+}
+
+html.dark-theme .card {
+  background-color: var(--surface-color);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--default-color);
+}
+
+html.dark-theme .card .text-dark {
+  color: #ffffff !important;
+}
+
+html.dark-theme .maintenance-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+html.dark-theme .contact .info-wrap,
+html.dark-theme .contact .php-email-form {
+  background-color: var(--surface-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+html.dark-theme .skills .progress-bar-wrap {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+html.dark-theme #theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f0e68c;
+  border: none;
+  transition: all 0.3s;
+}
+
+html.dark-theme #theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+#theme-toggle {
+  background: rgba(0, 0, 0, 0.08);
+  color: #333;
+  border: none;
+  transition: all 0.3s;
+}
+
+#theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+html.dark-theme #lang-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s;
+}
+
+html.dark-theme #lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#lang-toggle {
+  background: rgba(0, 0, 0, 0.08);
+  color: #333;
+  border: none;
+  transition: all 0.3s;
+}
+
+#lang-toggle:hover {
+  background: rgba(0, 0, 0, 0.15);
+}

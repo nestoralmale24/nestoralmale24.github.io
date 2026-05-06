@@ -220,5 +220,60 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
   
+  /**
+   * Dark / Light theme toggle
+   */
+  const themeToggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const themeIcon = themeToggle?.querySelector('i');
+
+  function setThemeIcon(isDark) {
+    if (!themeIcon) return;
+    themeIcon.className = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-fill';
+  }
+
+  if (localStorage.getItem('theme') === 'dark') {
+    html.classList.add('dark-theme');
+    setThemeIcon(true);
+  }
+
+  themeToggle?.addEventListener('click', () => {
+    html.classList.toggle('dark-theme');
+    const isDark = html.classList.contains('dark-theme');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    setThemeIcon(isDark);
+  });
+
+  /**
+   * Language toggle (EN / ES)
+   */
+  const langToggle = document.getElementById('lang-toggle');
+  const langLabel = langToggle?.querySelector('span');
+  let currentLang = localStorage.getItem('lang') || 'en';
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en][data-es]').forEach(el => {
+      const text = el.getAttribute(`data-${lang}`);
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = text;
+      } else if (text.includes('<')) {
+        el.innerHTML = text;
+      } else {
+        el.textContent = text;
+      }
+    });
+    html.lang = lang;
+    if (langLabel) langLabel.textContent = lang === 'en' ? 'ES' : 'EN';
+    currentLang = lang;
+  }
+
+  applyLanguage(currentLang);
+
+  langToggle?.addEventListener('click', () => {
+    const newLang = currentLang === 'en' ? 'es' : 'en';
+    localStorage.setItem('lang', newLang);
+    applyLanguage(newLang);
+  });
+
 
 })();
