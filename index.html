@@ -30,8 +30,11 @@
 
 <body class="index-page">
 
+  <div id="scroll-progress"></div>
+
+  <button class="header-toggle d-xl-none" aria-label="Toggle menu"><span></span></button>
+
   <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
       <img src="assets/img/face.jpeg" alt="" class="img-fluid rounded-circle">
@@ -76,7 +79,7 @@
 
     <section id="principal" class="home section dark-background">
 
-      <img src="assets/img/me.jpg" alt="" data-aos="fade-in" class="">
+      <img src="assets/img/me.jpg" alt="" data-aos="fade-in">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Néstor Almalé</h2>
@@ -90,7 +93,7 @@
 
     <section id="sobremi" class="about section">
 
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title" data-aos="fade-up" data-text-reveal>
         <h2 data-en="About Me" data-es="Sobre Mí">About Me</h2>
         <p data-en="👋 Hi! I'm Néstor, a Full Stack Developer eager to grow, learn, and take on new and exciting challenges. I currently work with Java, Spring Boot, and Angular, developing robust and scalable applications, ensuring code quality and applying best practices. I thrive in agile environments, managing tasks and collaborating actively with my team. I value communication and teamwork, always seeking to improve, take on more responsibility, and contribute to impactful projects. I enjoy working in an environment where everyone rows in the same direction, learning from others, and sharing what I know. I believe leadership is not just about guiding, but also about motivating, supporting, and growing alongside teammates. I'm constantly evolving, striving to improve every day, and I'm open to new opportunities that allow me to grow, take on greater responsibilities, and work on projects that truly make a difference. 🚀" data-es="👋 ¡Hola! Soy Néstor, un desarrollador Full Stack con ganas de crecer, aprender y asumir nuevos y emocionantes retos. Actualmente trabajo con Java, Spring Boot y Angular, desarrollando aplicaciones robustas y escalables, asegurando la calidad del código y aplicando buenas prácticas. Me desenvuelvo bien en entornos ágiles, gestionando tareas y colaborando activamente con mi equipo. Valoro la comunicación y el trabajo en equipo, siempre buscando mejorar, asumir más responsabilidad y contribuir a proyectos con impacto. Disfruto trabajando en un entorno donde todos reman en la misma dirección, aprendiendo de los demás y compartiendo lo que sé. Creo que el liderazgo no es solo guiar, sino también motivar, apoyar y crecer junto a los compañeros. Estoy en constante evolución, esforzándome por mejorar cada día, y abierto a nuevas oportunidades que me permitan crecer, asumir mayores responsabilidades y trabajar en proyectos que realmente marquen la diferencia. 🚀">👋 Hi! I'm Néstor, a Full Stack Developer eager to grow, learn, and take on new and exciting challenges. I currently work with Java, Spring Boot, and Angular, developing robust and scalable applications, ensuring code quality and applying best practices. I thrive in agile environments, managing tasks and collaborating actively with my team. I value communication and teamwork, always seeking to improve, take on more responsibility, and contribute to impactful projects. I enjoy working in an environment where everyone rows in the same direction, learning from others, and sharing what I know. I believe leadership is not just about guiding, but also about motivating, supporting, and growing alongside teammates. I'm constantly evolving, striving to improve every day, and I'm open to new opportunities that allow me to grow, take on greater responsibilities, and work on projects that truly make a difference. 🚀</p>
       </div>
@@ -98,7 +101,7 @@
       <div class="container presentation" data-aos="fade-up" data-aos-delay="100">
 
         <div class="container mt-5">
-          <div class="card p-4 text-center">
+          <div class="card p-4 text-center ripple-container">
             <div class="col-lg-4">
             </div>
             <h2 class="text-dark">🌐<span data-en="Full Stack Developer" data-es="Desarrollador Full Stack">Full Stack Developer</span></h2>
@@ -146,7 +149,7 @@
 
     <section id="skills" class="skills section light-background">
 
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title" data-aos="fade-up" data-text-reveal>
         <h2 data-en="Technologies" data-es="Tecnologías">Technologies</h2>
       </div>
 
@@ -154,85 +157,85 @@
 
         <div class="row skills-content skills-animation">
 
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
+          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4 skill-item" data-stagger="0">
+            <div class="tilt-card">
               <span class="skill d-block text-center"><i
                   class="devicon-java-plain colored fs-1"></i><br><b>Java</b></span>
             </div>
           </div>
           
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
+          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4 skill-item" data-stagger="1">
+            <div class="tilt-card">
               <span class="skill d-block text-center"><i
                   class="devicon-spring-plain colored fs-1"></i><br><b>Spring</b></span>
             </div>
           </div>
 
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
+          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4 skill-item" data-stagger="2">
+            <div class="tilt-card">
               <span class="skill d-block text-center"><i
                   class="devicon-angular-plain colored fs-1" style="color: red;"></i><br><b>Angular</b></span>
             </div>
           </div>
 
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
+          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4 skill-item" data-stagger="3">
+            <div class="tilt-card">
               <span class="skill d-block text-center"><i
                   class="devicon-mysql-plain colored fs-1"></i><br><b>MySQL</b></span>
             </div>
           </div>
 
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
+          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4 skill-item" data-stagger="4">
+            <div class="tilt-card">
               <span class="skill d-block text-center"><i
                   class="devicon-git-plain colored fs-1"></i><br><b>Git</b></span>
             </div>
           </div>
 
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
+          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4 skill-item" data-stagger="5">
+            <div class="tilt-card">
               <span class="skill d-block text-center"><i
                   class="devicon-jenkins-line colored fs-1"></i><br><b>Jenkins</b></span>
             </div>
           </div>
 
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
+          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4 skill-item" data-stagger="6">
+            <div class="tilt-card">
               <span class="skill d-block text-center"><i
                   class="devicon-oracle-plain colored colored fs-1"></i><br><b>Oracle</b></span>
             </div>
           </div>
 
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
+          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4 skill-item" data-stagger="7">
+            <div class="tilt-card">
               <span class="skill d-block text-center"><i
                   class="devicon-html5-plain colored fs-1"></i><br><b>HTML</b></span>
             </div>
           </div>
 
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
+          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4 skill-item" data-stagger="8">
+            <div class="tilt-card">
               <span class="skill d-block text-center"><i
                   class="devicon-css3-plain colored fs-1"></i><br><b>CSS</b></span>
             </div>
           </div>
 
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
+          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4 skill-item" data-stagger="9">
+            <div class="tilt-card">
               <span class="skill d-block text-center"><i
-                  class="devicon-docker-plain colored fs-1"></i><br><b>Microservices</b></span>
+                  class="devicon-docker-plain colored fs-1"></i><br><b>Docker</b></span>
             </div>
           </div>
 
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
+          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4 skill-item" data-stagger="10">
+            <div class="tilt-card">
               <span class="skill d-block text-center"><i
                   class="devicon-sourcetree-plain colored fs-1"></i><br><b>Sourcetree</b></span>
             </div>
           </div>
 
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
+          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4 skill-item" data-stagger="11">
+            <div class="tilt-card">
               <span class="skill d-block text-center"><i
                   class="devicon-hibernate-plain fs-1"></i><br><b>Hibernate</b></span>
             </div>
@@ -242,7 +245,7 @@
     </section>
     <section id="resume" class="resume section">
 
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title" data-aos="fade-up" data-text-reveal>
         <h2 data-en="Professional Experience" data-es="Experiencia Profesional">Professional Experience</h2>
       </div>
 
@@ -336,7 +339,7 @@
 
     <section id="contact" class="contact section">
 
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title" data-aos="fade-up" data-text-reveal>
         <h2 data-en="Contact" data-es="Contacto">Contact</h2>
         <p data-en="If you're looking for a developer, don't hesitate to get in touch. <br> I'm ready to contribute and grow within your team 🌐" data-es="Si buscas un desarrollador, no dudes en ponerte en contacto. <br> Estoy listo para contribuir y crecer dentro de tu equipo 🌐">If you're looking for a developer, don't hesitate to get in touch. <br> I'm ready to contribute and grow within your team 🌐
         </p>

@@ -9,9 +9,20 @@
   const headerToggleBtn = document.querySelector('.header-toggle');
 
   function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
+    const header = document.querySelector('#header');
+    const toggle = document.querySelector('.header-toggle');
+    header.classList.toggle('header-show');
+    toggle.classList.toggle('active');
+    
+    if (!header.classList.contains('header-show')) {
+      document.querySelectorAll('#navmenu ul li').forEach((li, i) => {
+        li.style.transitionDelay = '0s';
+      });
+    } else {
+      document.querySelectorAll('#navmenu ul li').forEach((li, i) => {
+        li.style.transitionDelay = `${(i + 1) * 0.05}s`;
+      });
+    }
   }
   headerToggleBtn.addEventListener('click', headerToggle);
 
@@ -20,11 +31,16 @@
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
-      if (document.querySelector('.header-show')) {
-        headerToggle();
+      const header = document.querySelector('#header');
+      const toggle = document.querySelector('.header-toggle');
+      if (header.classList.contains('header-show')) {
+        header.classList.remove('header-show');
+        toggle.classList.remove('active');
+        document.querySelectorAll('#navmenu ul li').forEach(li => {
+          li.style.transitionDelay = '0s';
+        });
       }
     });
-
   });
 
   /**
@@ -274,6 +290,158 @@
     localStorage.setItem('lang', newLang);
     applyLanguage(newLang);
   });
+
+
+  /**
+   * Scroll Progress Bar
+   */
+  const scrollProgress = document.getElementById('scroll-progress');
+  if (scrollProgress) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (scrollTop / scrollHeight) * 100;
+      scrollProgress.style.width = progress + '%';
+    });
+  }
+
+  /**
+   * Text Reveal Animation
+   */
+  const revealSections = document.querySelectorAll('.section-title[data-text-reveal]');
+  if (revealSections.length > 0) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    
+    revealSections.forEach(section => revealObserver.observe(section));
+  }
+
+  /**
+   * Skills Stagger Entrance Animation
+   */
+  const skillItems = document.querySelectorAll('.skill-item');
+  if (skillItems.length > 0) {
+    const skillsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const stagger = parseInt(entry.target.getAttribute('data-stagger')) || 0;
+          setTimeout(() => {
+            entry.target.classList.add('animate');
+          }, stagger * 80);
+          skillsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    skillItems.forEach(item => skillsObserver.observe(item));
+  }
+
+  /**
+   * 3D Tilt Effect on Skill Cards
+   */
+  const tiltCards = document.querySelectorAll('.tilt-card');
+  if (tiltCards.length > 0 && window.innerWidth > 768) {
+    tiltCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -15;
+        const rotateY = ((x - centerX) / centerX) * 15;
+        
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+      });
+    });
+  }
+
+  /**
+   * Floating Animation for Skills
+   */
+  const floatingSkills = document.querySelectorAll('.tilt-card');
+  if (floatingSkills.length > 0) {
+    const floatObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('floating');
+        } else {
+          entry.target.classList.remove('floating');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    floatingSkills.forEach(skill => floatObserver.observe(skill));
+  }
+
+  /**
+   * Glow Effect on Skill Hover
+   */
+  const techColors = {
+    'Java': '#f89820',
+    'Spring': '#6db33f',
+    'Angular': '#dd0031',
+    'MySQL': '#4479a1',
+    'Git': '#f05032',
+    'Jenkins': '#d24939',
+    'Oracle': '#f80000',
+    'HTML': '#e34f26',
+    'CSS': '#1572b6',
+    'Microservices': '#2496ed',
+    'Sourcetree': '#0052cc',
+    'Hibernate': '#59666c'
+  };
+
+  if (tiltCards.length > 0) {
+    tiltCards.forEach(card => {
+      const glow = document.createElement('div');
+      glow.className = 'skill-glow';
+      card.appendChild(glow);
+
+      const skillName = card.querySelector('b')?.textContent;
+      const color = techColors[skillName] || 'var(--accent-color)';
+      glow.style.background = color;
+
+      card.addEventListener('mouseenter', () => {
+        glow.style.background = color;
+      });
+    });
+  }
+
+  /**
+   * Ripple Effect on Touch
+   */
+  const rippleContainers = document.querySelectorAll('.ripple-container');
+  if (rippleContainers.length > 0) {
+    rippleContainers.forEach(container => {
+      container.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        const rect = container.getBoundingClientRect();
+        const x = touch.clientX - rect.left;
+        const y = touch.clientY - rect.top;
+        
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        
+        container.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+  }
+
 
 
 })();
