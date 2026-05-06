@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio - Néstor Almalé</title>
+  <title>Néstor Almalé — Full Stack Developer</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -14,277 +14,241 @@
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="vendor/aos/aos.css" rel="stylesheet">
-  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="assets/img/face.jpeg" alt="" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-
-      <h1 class="sitename">Néstor Almalé</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="https://www.linkedin.com/in/nestoralmale24/" class="linkedin" target="_blank"><i
-          class="bi bi-linkedin"></i></a>
-      <a href="https://github.com/nestoralmale24" class="github" target="_blank"><i class="bi bi-github"></i></a>
-      <a href="mailto:nestordic2004@gmail.com" class="mail" target="_blank"><i
-          class="bi bi-envelope-fill"></i></a>
-    </div>
-
-    <div class="text-center mb-3 d-flex justify-content-center gap-2">
-      <button id="theme-toggle" class="btn btn-sm rounded-circle" title="Toggle theme" style="width:40px;height:40px;">
+  <nav id="navbar" class="navbar">
+    <a href="#hero" class="nav-logo">N<span class="nav-logo-dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about"><span data-en="About" data-es="Sobre mí">About</span></a></li>
+      <li><a href="#skills"><span data-en="Skills" data-es="Tecnologías">Skills</span></a></li>
+      <li><a href="#experience"><span data-en="Experience" data-es="Experiencia">Experience</span></a></li>
+      <li><a href="#contact"><span data-en="Contact" data-es="Contacto">Contact</span></a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="nav-btn" title="Toggle theme">
         <i class="bi bi-moon-fill"></i>
       </button>
-      <button id="lang-toggle" class="btn btn-sm rounded-circle" title="Toggle language" style="width:40px;height:40px;">
-        <span style="font-size:14px;font-weight:700;">ES</span>
+      <button id="lang-toggle" class="nav-btn" title="Toggle language">
+        <span>ES</span>
+      </button>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
+  </nav>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#principal" class="active"><i class="bi bi-house navicon"></i><span data-en="Profile" data-es="Perfil">Profile</span></a></li>
-        <li><a href="#sobremi"><i class="bi bi-person navicon"></i><span data-en="About Me" data-es="Sobre Mí">About Me</span></a></li>
-        <li><a href="#skills"><i class="bi bi-hdd-stack navicon"></i><span data-en="Technologies" data-es="Tecnologías">Technologies</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span data-en="Experience" data-es="Experiencia">Experience</span></a></li>
-<!--         <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span data-en="Portfolio" data-es="Portfolio">Portfolio</span></a></li> -->
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span data-en="Contact" data-es="Contacto">Contact</span></a></li>
-      </ul>
-    </nav>
+  <main>
 
-  </header>
-
-  <main class="main">
-
-    <section id="principal" class="home section dark-background">
-
-      <img src="assets/img/me.jpg" alt="" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Néstor Almalé</h2>
-        <p><span data-en="Building experiences with" data-es="Creando experiencias con">Building experiences with</span> <span class="typed"
-            data-typed-items="Java, Angular, SQL, Hibernate, Spring, JPA"></span><span
-            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
-            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+    <section id="hero" class="hero">
+      <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="hero-gradient"></div>
       </div>
-
-    </section>
-
-    <section id="sobremi" class="about section">
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2 data-en="About Me" data-es="Sobre Mí">About Me</h2>
-        <p data-en="👋 Hi! I'm Néstor, a Full Stack Developer eager to grow, learn, and take on new and exciting challenges. I currently work with Java, Spring Boot, and Angular, developing robust and scalable applications, ensuring code quality and applying best practices. I thrive in agile environments, managing tasks and collaborating actively with my team. I value communication and teamwork, always seeking to improve, take on more responsibility, and contribute to impactful projects. I enjoy working in an environment where everyone rows in the same direction, learning from others, and sharing what I know. I believe leadership is not just about guiding, but also about motivating, supporting, and growing alongside teammates. I'm constantly evolving, striving to improve every day, and I'm open to new opportunities that allow me to grow, take on greater responsibilities, and work on projects that truly make a difference. 🚀" data-es="👋 ¡Hola! Soy Néstor, un desarrollador Full Stack con ganas de crecer, aprender y asumir nuevos y emocionantes retos. Actualmente trabajo con Java, Spring Boot y Angular, desarrollando aplicaciones robustas y escalables, asegurando la calidad del código y aplicando buenas prácticas. Me desenvuelvo bien en entornos ágiles, gestionando tareas y colaborando activamente con mi equipo. Valoro la comunicación y el trabajo en equipo, siempre buscando mejorar, asumir más responsabilidad y contribuir a proyectos con impacto. Disfruto trabajando en un entorno donde todos reman en la misma dirección, aprendiendo de los demás y compartiendo lo que sé. Creo que el liderazgo no es solo guiar, sino también motivar, apoyar y crecer junto a los compañeros. Estoy en constante evolución, esforzándome por mejorar cada día, y abierto a nuevas oportunidades que me permitan crecer, asumir mayores responsabilidades y trabajar en proyectos que realmente marquen la diferencia. 🚀">👋 Hi! I'm Néstor, a Full Stack Developer eager to grow, learn, and take on new and exciting challenges. I currently work with Java, Spring Boot, and Angular, developing robust and scalable applications, ensuring code quality and applying best practices. I thrive in agile environments, managing tasks and collaborating actively with my team. I value communication and teamwork, always seeking to improve, take on more responsibility, and contribute to impactful projects. I enjoy working in an environment where everyone rows in the same direction, learning from others, and sharing what I know. I believe leadership is not just about guiding, but also about motivating, supporting, and growing alongside teammates. I'm constantly evolving, striving to improve every day, and I'm open to new opportunities that allow me to grow, take on greater responsibilities, and work on projects that truly make a difference. 🚀</p>
-      </div>
-
-      <div class="container presentation" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="container mt-5">
-          <div class="card p-4 text-center">
-            <div class="col-lg-4">
-            </div>
-            <h2 class="text-dark">🌐<span data-en="Full Stack Developer" data-es="Desarrollador Full Stack">Full Stack Developer</span></h2>
-            <p class="fst-italic" data-en="Passionate about software development and creation. Always seeking to improve, take on more responsibilities, and contribute to projects that make an impact." data-es="Apasionado por el desarrollo y la creación de software. Siempre buscando mejorar, asumir más responsabilidades y contribuir a proyectos que marquen la diferencia.">Passionate about software development and creation. Always seeking to improve, take on more responsibilities, and contribute to projects that make an impact.</p>
-
-              
-            <div class="row mt-4 text-start">
-              <div class="col-6">
-                <h5><span class="icon">🔹</span> <span data-en="Areas of Expertise" data-es="Áreas de Especialización">Areas of Expertise</span></h5>
-                <p data-en="✔️ Backend & Databases" data-es="✔️ Backend y Bases de Datos">✔️ Backend & Databases</p> <br>
-              </div>
-              <div class="col-6">
-                <h5><span class="icon">🔹</span> <span data-en="Key Technologies" data-es="Tecnologías Clave">Key Technologies</span></h5>
-                <p>🛠️ Angular | Java | Spring | Hibernate | SQL</p>
-              </div>
-            </div>
-
-            <div class="row mt-3 text-start">
-              <div class="col-6">
-                <h5><span class="icon">🔹</span> <span data-en="Interests" data-es="Intereses">Interests</span></h5>
-                <p data-en="🚀 International projects<br>🔗 Microservices<br>🎖️ Team Leadership" data-es="🚀 Proyectos internacionales<br>🔗 Microservicios<br>🎖️ Liderazgo de equipos">🚀 International projects<br>🔗 Microservices<br>🎖️ Team Leadership</p><br>
-              </div>
-              
-              <div class="col-6">
-                <h5><span class="icon">🔹</span> <span data-en="My Motivations" data-es="Mis Motivaciones">My Motivations</span></h5>
-                <p data-en="✨ Build efficient and scalable software" data-es="✨ Crear software eficiente y escalable">✨ Build efficient and scalable software</p>
-              </div>
-            </div>
-
-            <div class="row mt-3 text-start">
-              <div class="col-6">
-                <h5><span class="icon">🔹</span> <span data-en="Learning" data-es="Formación">Learning</span></h5>
-                <p>📚 Python | IA</p><br>
-              </div>
-              
-              <div class="col-6">
-                <h5><span class="icon">🔹</span><span data-en="Collaborative Skills" data-es="Habilidades Colaborativas">Collaborative Skills</span></h5>
-                <p data-en="🤝 Teamwork | Agile and Quality-Driven Development | Leadership" data-es="🤝 Trabajo en equipo | Desarrollo ágil y orientado a la calidad | Liderazgo">🤝 Teamwork | Agile and Quality-Driven Development | Leadership</p>
-              </div>
-            </div>
-          </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow" data-en="Full Stack Developer" data-es="Desarrollador Full Stack">Full Stack Developer</p>
+        <h1 class="hero-title">
+          <span class="hero-title-line">Néstor</span>
+          <span class="hero-title-line">Almalé</span>
+        </h1>
+        <p class="hero-subtitle">
+          <span data-en="Building experiences with" data-es="Creando experiencias con">Building experiences with</span>
+          <span class="typed-wrapper">
+            <span class="typed" data-typed-items="Java, Angular, SQL, Spring, Hibernate, JPA"></span>
+          </span>
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" data-en="Get in touch" data-es="Contactar">Get in touch</a>
+          <a href="#about" class="btn btn-secondary" data-en="Learn more" data-es="Saber más">Learn more</a>
+        </div>
+        <div class="hero-scroll">
+          <span data-en="Scroll to explore" data-es="Desplázate para explorar">Scroll to explore</span>
+          <div class="scroll-line"></div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="skills section light-background">
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2 data-en="Technologies" data-es="Tecnologías">Technologies</h2>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-java-plain colored fs-1"></i><br><b>Java</b></span>
-            </div>
-          </div>
-          
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-spring-plain colored fs-1"></i><br><b>Spring</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-angular-plain colored fs-1" style="color: red;"></i><br><b>Angular</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-mysql-plain colored fs-1"></i><br><b>MySQL</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-git-plain colored fs-1"></i><br><b>Git</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-jenkins-line colored fs-1"></i><br><b>Jenkins</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-oracle-plain colored colored fs-1"></i><br><b>Oracle</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-html5-plain colored fs-1"></i><br><b>HTML</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-css3-plain colored fs-1"></i><br><b>CSS</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-docker-plain colored fs-1"></i><br><b>Microservices</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-sourcetree-plain colored fs-1"></i><br><b>Sourcetree</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-hibernate-plain fs-1"></i><br><b>Hibernate</b></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="resume" class="resume section">
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2 data-en="Professional Experience" data-es="Experiencia Profesional">Professional Experience</h2>
-      </div>
-
+    <section id="about" class="section section-about">
       <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title" data-en="Professional Experience" data-es="Experiencia Profesional">Professional Experience</h3>
-
-            <div class="resume-item">
-              <h4 data-en="Full Stack Developer" data-es="Desarrollador Full Stack">Full Stack Developer</h4>
-              <h5 data-en="Jun 2024 - Present" data-es="Jun 2024 - Actualidad">Jun 2024 - Present</h5>
-              <p><em><b>Hiberus Technology</b> | Zaragoza, Spain</em></p>
-              <ul>
-                <li><b data-en="Back-end development:" data-es="Desarrollo Back-end:">Back-end development:</b> <span data-en="Development and maintenance of multiple projects, from implementing CRUD functionalities to deploying applications in production." data-es="Desarrollo y mantenimiento de múltiples proyectos, desde la implementación de funcionalidades CRUD hasta el despliegue de aplicaciones en producción.">Development and maintenance of multiple projects, from implementing CRUD functionalities to deploying applications in production.</span></li>
-
-                <li><b data-en="Front-end development:" data-es="Desarrollo Front-end:">Front-end development:</b> <span data-en="Created interactive and responsive interfaces using Angular, HTML, CSS, and TypeScript, optimizing the user experience across different devices." data-es="Creación de interfaces interactivas y responsivas usando Angular, HTML, CSS y TypeScript, optimizando la experiencia de usuario en diferentes dispositivos.">Created interactive and responsive interfaces using Angular, HTML, CSS, and TypeScript, optimizing the user experience across different devices.</span></li>
-
-                <li><b data-en="Database Management:" data-es="Gestión de Bases de Datos:">Database Management:</b> <span data-en="Designed, maintained, and optimized relational databases (PostgreSQL, MySQL), ensuring efficient structures and optimized queries." data-es="Diseño, mantenimiento y optimización de bases de datos relacionales (PostgreSQL, MySQL), asegurando estructuras eficientes y consultas optimizadas.">Designed, maintained, and optimized relational databases (PostgreSQL, MySQL), ensuring efficient structures and optimized queries.</span></li>
-              </ul>
+        <div class="section-header reveal">
+          <span class="section-label" data-en="About" data-es="Sobre mí">About</span>
+          <h2 class="section-title" data-en="Passionate about building software that makes an impact" data-es="Apasionado por crear software que marca la diferencia">Passionate about building software that makes an impact</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal" data-reveal-delay="100">
+            <p data-en="I'm a Full Stack Developer who thrives on turning complex problems into elegant solutions. I work with Java, Spring Boot, and Angular — developing robust, scalable applications with clean code and best practices. I believe great software comes from great teamwork, clear communication, and a relentless drive to improve." data-es="Soy un desarrollador Full Stack que disfruta convirtiendo problemas complejos en soluciones elegantes. Trabajo con Java, Spring Boot y Angular — desarrollando aplicaciones robustas y escalables con código limpio y buenas prácticas. Creo que el gran software nace del trabajo en equipo, la comunicación clara y las ganas de mejorar constantemente.">I'm a Full Stack Developer who thrives on turning complex problems into elegant solutions. I work with Java, Spring Boot, and Angular — developing robust, scalable applications with clean code and best practices. I believe great software comes from great teamwork, clear communication, and a relentless drive to improve.</p>
+            <div class="about-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Angular</span>
+              <span class="tag">Agile</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Microservices</span>
             </div>
-
           </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title" data-en="Certifications" data-es="Certificaciones">Certifications</h3>
-            <div class="resume-item">
-              <ul>
-                <li><b data-en="🌐 English:" data-es="🌐 Inglés:">🌐 English:</b> Trinity College London B2+ (178) | 06/2022</li>
-                <li><b>👔 Scrum Master:</b> 150 PDAs – PUE certification | 09/2024</li>
-                <li><b>🧑‍💼 Product Owner:</b> 70 PDAs – PUE certification | 09/2024</li>
-                <li><b>🧑‍💼 Product Owner:</b> 70 PDAs – PUE certification | 09/2024</li>
-                <li><b>☕ 25/0999.014 - Java SE 17 Developer</b> CAS Training | 06/2025</li>
-                <li><b>🤖 GitHub Copilot</b> Hiberus University | 07/2025</li>
-              </ul>
+          <div class="about-stats reveal" data-reveal-delay="200">
+            <div class="stat-card">
+              <span class="stat-number" data-target="999">0</span>
+              <span class="stat-label" data-en="Coffees" data-es="Cafés">Coffees</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="2500">0</span>
+              <span class="stat-label" data-en="Commits" data-es="Commits">Commits</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="12">0</span>
+              <span class="stat-label" data-en="Projects" data-es="Proyectos">Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="6">0</span>
+              <span class="stat-label" data-en="Certifications" data-es="Certificaciones">Certifications</span>
             </div>
           </div>
         </div>
-
       </div>
+    </section>
 
+    <section id="skills" class="section section-skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label" data-en="Technologies" data-es="Tecnologías">Technologies</span>
+          <h2 class="section-title" data-en="My toolkit" data-es="Mi arsenal">My toolkit</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-reveal-delay="0">
+            <i class="devicon-java-plain colored"></i>
+            <h3>Java</h3>
+            <p data-en="Core language" data-es="Lenguaje principal">Core language</p>
+          </div>
+          <div class="skill-card reveal" data-reveal-delay="60">
+            <i class="devicon-spring-plain colored"></i>
+            <h3>Spring</h3>
+            <p data-en="Backend framework" data-es="Framework backend">Backend framework</p>
+          </div>
+          <div class="skill-card reveal" data-reveal-delay="120">
+            <i class="devicon-angular-plain colored"></i>
+            <h3>Angular</h3>
+            <p data-en="Frontend framework" data-es="Framework frontend">Frontend framework</p>
+          </div>
+          <div class="skill-card reveal" data-reveal-delay="180">
+            <i class="devicon-mysql-plain colored"></i>
+            <h3>MySQL</h3>
+            <p data-en="Database" data-es="Base de datos">Database</p>
+          </div>
+          <div class="skill-card reveal" data-reveal-delay="240">
+            <i class="devicon-git-plain colored"></i>
+            <h3>Git</h3>
+            <p data-en="Version control" data-es="Control de versiones">Version control</p>
+          </div>
+          <div class="skill-card reveal" data-reveal-delay="300">
+            <i class="devicon-jenkins-line colored"></i>
+            <h3>Jenkins</h3>
+            <p data-en="CI/CD" data-es="CI/CD">CI/CD</p>
+          </div>
+          <div class="skill-card reveal" data-reveal-delay="360">
+            <i class="devicon-oracle-plain colored"></i>
+            <h3>Oracle</h3>
+            <p data-en="Database" data-es="Base de datos">Database</p>
+          </div>
+          <div class="skill-card reveal" data-reveal-delay="420">
+            <i class="devicon-html5-plain colored"></i>
+            <h3>HTML5</h3>
+            <p data-en="Markup" data-es="Marcado">Markup</p>
+          </div>
+          <div class="skill-card reveal" data-reveal-delay="480">
+            <i class="devicon-css3-plain colored"></i>
+            <h3>CSS3</h3>
+            <p data-en="Styling" data-es="Estilos">Styling</p>
+          </div>
+          <div class="skill-card reveal" data-reveal-delay="540">
+            <i class="devicon-docker-plain colored"></i>
+            <h3>Docker</h3>
+            <p data-en="Containers" data-es="Contenedores">Containers</p>
+          </div>
+          <div class="skill-card reveal" data-reveal-delay="600">
+            <i class="devicon-hibernate-plain"></i>
+            <h3>Hibernate</h3>
+            <p data-en="ORM" data-es="ORM">ORM</p>
+          </div>
+          <div class="skill-card reveal" data-reveal-delay="660">
+            <i class="devicon-sourcetree-plain colored"></i>
+            <h3>Sourcetree</h3>
+            <p data-en="Git client" data-es="Cliente Git">Git client</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label" data-en="Experience" data-es="Experiencia">Experience</span>
+          <h2 class="section-title" data-en="Where I've made an impact" data-es="Donde he dejado huella">Where I've made an impact</h2>
+        </div>
+        <div class="experience-layout">
+          <div class="experience-main reveal" data-reveal-delay="100">
+            <div class="exp-card">
+              <div class="exp-header">
+                <h3 data-en="Full Stack Developer" data-es="Desarrollador Full Stack">Full Stack Developer</h3>
+                <span class="exp-badge" data-en="Jun 2024 — Present" data-es="Jun 2024 — Actualidad">Jun 2024 — Present</span>
+              </div>
+              <p class="exp-company">Hiberus Technology <span>·</span> Zaragoza, Spain</p>
+              <ul class="exp-details">
+                <li><strong data-en="Backend:" data-es="Backend:">Backend:</strong> <span data-en="Built and maintained multiple projects from CRUD functionality to production deployment." data-es="Desarrollo y mantenimiento de múltiples proyectos, desde CRUD hasta despliegue en producción.">Built and maintained multiple projects from CRUD functionality to production deployment.</span></li>
+                <li><strong data-en="Frontend:" data-es="Frontend:">Frontend:</strong> <span data-en="Created responsive interfaces with Angular, HTML, CSS, and TypeScript." data-es="Interfaces responsivas con Angular, HTML, CSS y TypeScript.">Created responsive interfaces with Angular, HTML, CSS, and TypeScript.</span></li>
+                <li><strong data-en="Databases:" data-es="Bases de datos:">Databases:</strong> <span data-en="Designed and optimized PostgreSQL and MySQL databases for efficiency." data-es="Diseño y optimización de bases de datos PostgreSQL y MySQL.">Designed and optimized PostgreSQL and MySQL databases for efficiency.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="experience-sidebar reveal" data-reveal-delay="200">
+            <h3 class="sidebar-title" data-en="Certifications" data-es="Certificaciones">Certifications</h3>
+            <div class="cert-list">
+              <div class="cert-item">
+                <span class="cert-emoji">🌐</span>
+                <div>
+                  <strong data-en="English B2+" data-es="Inglés B2+">English B2+</strong>
+                  <p>Trinity College London · 2022</p>
+                </div>
+              </div>
+              <div class="cert-item">
+                <span class="cert-emoji">👔</span>
+                <div>
+                  <strong>Scrum Master</strong>
+                  <p>PUE · 2024</p>
+                </div>
+              </div>
+              <div class="cert-item">
+                <span class="cert-emoji">🧑‍💼</span>
+                <div>
+                  <strong>Product Owner</strong>
+                  <p>PUE · 2024</p>
+                </div>
+              </div>
+              <div class="cert-item">
+                <span class="cert-emoji">☕</span>
+                <div>
+                  <strong>Java SE 17 Developer</strong>
+                  <p>CAS Training · 2025</p>
+                </div>
+              </div>
+              <div class="cert-item">
+                <span class="cert-emoji">🤖</span>
+                <div>
+                  <strong>GitHub Copilot</strong>
+                  <p>Hiberus University · 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
 <!--     <section id="portfolio" class="portfolio section light-background">
@@ -334,109 +298,75 @@
     </section> -->
 
 
-    <section id="contact" class="contact section">
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2 data-en="Contact" data-es="Contacto">Contact</h2>
-        <p data-en="If you're looking for a developer, don't hesitate to get in touch. <br> I'm ready to contribute and grow within your team 🌐" data-es="Si buscas un desarrollador, no dudes en ponerte en contacto. <br> Estoy listo para contribuir y crecer dentro de tu equipo 🌐">If you're looking for a developer, don't hesitate to get in touch. <br> I'm ready to contribute and grow within your team 🌐
-        </p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3 data-en="Location" data-es="Ubicación">Location</h3>
-                  <p>Zaragoza</p>
-                </div>
+    <section id="contact" class="section section-contact">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info reveal">
+            <span class="section-label" data-en="Contact" data-es="Contacto">Contact</span>
+            <h2 class="section-title" data-en="Let's build something together" data-es="Construyamos algo juntos">Let's build something together</h2>
+            <p data-en="I'm open to new opportunities and collaborations. If you're looking for a developer who's passionate about quality code and teamwork, let's talk." data-es="Estoy abierto a nuevas oportunidades y colaboraciones. Si buscas un desarrollador apasionado por el código de calidad y el trabajo en equipo, hablemos.">I'm open to new opportunities and collaborations. If you're looking for a developer who's passionate about quality code and teamwork, let's talk.</p>
+            <div class="contact-details">
+              <a href="mailto:nestordic2004@gmail.com" class="contact-link">
+                <i class="bi bi-envelope-fill"></i>
+                <span>nestordic2004@gmail.com</span>
+              </a>
+              <div class="contact-link">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>Zaragoza, Spain</span>
               </div>
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3 data-en="Email" data-es="Correo">Email</h3>
-                  <p>nestordic2004@gmail.com</p>
-                </div>
-              </div>
-              <iframe style="border:0; width: 100%; height: 270px;"
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Zaragoza+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-              </iframe>
+              <a href="https://www.linkedin.com/in/nestoralmale24/" target="_blank" class="contact-link">
+                <i class="bi bi-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/nestoralmale24" target="_blank" class="contact-link">
+                <i class="bi bi-github"></i>
+                <span>GitHub</span>
+              </a>
             </div>
           </div>
-
-          <div class="col-lg-7 position-relative">
+          <div class="contact-form-wrap reveal" data-reveal-delay="200">
             <div class="maintenance-overlay">
-              <p data-en="In maintenance...." data-es="En mantenimiento....">In maintenance....</p>
+              <p data-en="Coming soon" data-es="Próximamente">Coming soon</p>
             </div>
-          
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2" data-en="Name" data-es="Nombre">Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-          
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2" data-en="Email" data-es="Correo">Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-          
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2" data-en="Subject" data-es="Asunto">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-          
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2" data-en="Message" data-es="Mensaje">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-          
-                <div class="col-md-12 text-center">
-                  <div class="loading" data-en="Loading" data-es="Cargando">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message" data-en="Your message has been sent. Thank you!" data-es="Tu mensaje ha sido enviado. Muchas Gracias!">Your message has been sent. Thank you!</div>
-          
-                  <button type="submit" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
-                </div>
-          
+            <form class="contact-form" action="forms/contact.php" method="post">
+              <div class="form-group">
+                <label for="name-field" data-en="Name" data-es="Nombre">Name</label>
+                <input type="text" id="name-field" name="name" required>
               </div>
+              <div class="form-group">
+                <label for="email-field" data-en="Email" data-es="Correo">Email</label>
+                <input type="email" id="email-field" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="subject-field" data-en="Subject" data-es="Asunto">Subject</label>
+                <input type="text" id="subject-field" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message-field" data-en="Message" data-es="Mensaje">Message</label>
+                <textarea id="message-field" name="message" rows="6" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" data-en="Send message" data-es="Enviar mensaje">Send message</button>
             </form>
-          </div>    
-
+          </div>
         </div>
-
       </div>
-
     </section>
 
   </main>
 
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Néstor Almalé. <span data-en="Built with passion and clean code." data-es="Hecho con pasión y código limpio.">Built with passion and clean code.</span></p>
+    </div>
+  </footer>
 
-
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader"></div>
+  <a href="#hero" class="scroll-top" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
 
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/php-email-form/validate.js"></script>
-  <script src="vendor/aos/aos.js"></script>
   <script src="vendor/typed.js/typed.umd.js"></script>
-  <script src="vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="vendor/swiper/swiper-bundle.min.js"></script>
-
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>
