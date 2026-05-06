@@ -11,7 +11,6 @@
   <link href="assets/img/letra-n.png" rel="icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
@@ -30,8 +29,13 @@
 
 <body class="index-page">
 
+  <div id="scroll-progress"></div>
+
+  <div id="floating-particles"></div>
+
+  <button class="header-toggle d-xl-none" aria-label="Toggle menu"><span></span></button>
+
   <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
       <img src="assets/img/face.jpeg" alt="" class="img-fluid rounded-circle">
@@ -43,18 +47,18 @@
     </a>
 
     <div class="social-links text-center">
-      <a href="https://www.linkedin.com/in/nestoralmale24/" class="linkedin" target="_blank"><i
+      <a href="https://www.linkedin.com/in/nestoralmale24/" class="linkedin magnetic-target" target="_blank"><i
           class="bi bi-linkedin"></i></a>
-      <a href="https://github.com/nestoralmale24" class="github" target="_blank"><i class="bi bi-github"></i></a>
-      <a href="mailto:nestordic2004@gmail.com" class="mail" target="_blank"><i
+      <a href="https://github.com/nestoralmale24" class="github magnetic-target" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="mailto:nestordic2004@gmail.com" class="mail magnetic-target" target="_blank"><i
           class="bi bi-envelope-fill"></i></a>
     </div>
 
     <div class="text-center mb-3 d-flex justify-content-center gap-2">
-      <button id="theme-toggle" class="btn btn-sm rounded-circle" title="Toggle theme" style="width:40px;height:40px;">
+      <button id="theme-toggle" class="btn btn-sm rounded-circle magnetic-target" title="Toggle theme" style="width:40px;height:40px;">
         <i class="bi bi-moon-fill"></i>
       </button>
-      <button id="lang-toggle" class="btn btn-sm rounded-circle" title="Toggle language" style="width:40px;height:40px;">
+      <button id="lang-toggle" class="btn btn-sm rounded-circle magnetic-target" title="Toggle language" style="width:40px;height:40px;">
         <span style="font-size:14px;font-weight:700;">ES</span>
       </button>
     </div>
@@ -65,7 +69,6 @@
         <li><a href="#sobremi"><i class="bi bi-person navicon"></i><span data-en="About Me" data-es="Sobre Mí">About Me</span></a></li>
         <li><a href="#skills"><i class="bi bi-hdd-stack navicon"></i><span data-en="Technologies" data-es="Tecnologías">Technologies</span></a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span data-en="Experience" data-es="Experiencia">Experience</span></a></li>
-<!--         <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span data-en="Portfolio" data-es="Portfolio">Portfolio</span></a></li> -->
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span data-en="Contact" data-es="Contacto">Contact</span></a></li>
       </ul>
     </nav>
@@ -78,27 +81,40 @@
 
       <img src="assets/img/me.jpg" alt="" data-aos="fade-in" class="">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Néstor Almalé</h2>
-        <p><span data-en="Building experiences with" data-es="Creando experiencias con">Building experiences with</span> <span class="typed"
-            data-typed-items="Java, Angular, SQL, Hibernate, Spring, JPA"></span><span
-            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
-            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      <div class="home-hero-content" data-aos="fade-up" data-aos-delay="100">
+        <div class="hero-letter" data-letter>N</div>
+        <div class="container">
+          <h2 class="hero-title"><span class="hero-greeting" data-en="Hi, I'm" data-es="Hola, soy">Hi, I'm</span> Néstor Almalé</h2>
+          <p><span data-en="Building experiences with" data-es="Creando experiencias con">Building experiences with</span> <span class="typed"
+              data-typed-items="Java, Angular, SQL, Hibernate, Spring, JPA"></span><span
+              class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
+              class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+          <a href="#sobremi" class="btn-cta magnetic-target">
+            <span data-en="Discover More" data-es="Descubre Más">Discover More</span>
+            <i class="bi bi-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
       </div>
 
     </section>
 
     <section id="sobremi" class="about section">
 
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title" data-aos="fade-up" data-text-reveal>
         <h2 data-en="About Me" data-es="Sobre Mí">About Me</h2>
-        <p data-en="👋 Hi! I'm Néstor, a Full Stack Developer eager to grow, learn, and take on new and exciting challenges. I currently work with Java, Spring Boot, and Angular, developing robust and scalable applications, ensuring code quality and applying best practices. I thrive in agile environments, managing tasks and collaborating actively with my team. I value communication and teamwork, always seeking to improve, take on more responsibility, and contribute to impactful projects. I enjoy working in an environment where everyone rows in the same direction, learning from others, and sharing what I know. I believe leadership is not just about guiding, but also about motivating, supporting, and growing alongside teammates. I'm constantly evolving, striving to improve every day, and I'm open to new opportunities that allow me to grow, take on greater responsibilities, and work on projects that truly make a difference. 🚀" data-es="👋 ¡Hola! Soy Néstor, un desarrollador Full Stack con ganas de crecer, aprender y asumir nuevos y emocionantes retos. Actualmente trabajo con Java, Spring Boot y Angular, desarrollando aplicaciones robustas y escalables, asegurando la calidad del código y aplicando buenas prácticas. Me desenvuelvo bien en entornos ágiles, gestionando tareas y colaborando activamente con mi equipo. Valoro la comunicación y el trabajo en equipo, siempre buscando mejorar, asumir más responsabilidad y contribuir a proyectos con impacto. Disfruto trabajando en un entorno donde todos reman en la misma dirección, aprendiendo de los demás y compartiendo lo que sé. Creo que el liderazgo no es solo guiar, sino también motivar, apoyar y crecer junto a los compañeros. Estoy en constante evolución, esforzándome por mejorar cada día, y abierto a nuevas oportunidades que me permitan crecer, asumir mayores responsabilidades y trabajar en proyectos que realmente marquen la diferencia. 🚀">👋 Hi! I'm Néstor, a Full Stack Developer eager to grow, learn, and take on new and exciting challenges. I currently work with Java, Spring Boot, and Angular, developing robust and scalable applications, ensuring code quality and applying best practices. I thrive in agile environments, managing tasks and collaborating actively with my team. I value communication and teamwork, always seeking to improve, take on more responsibility, and contribute to impactful projects. I enjoy working in an environment where everyone rows in the same direction, learning from others, and sharing what I know. I believe leadership is not just about guiding, but also about motivating, supporting, and growing alongside teammates. I'm constantly evolving, striving to improve every day, and I'm open to new opportunities that allow me to grow, take on greater responsibilities, and work on projects that truly make a difference. 🚀</p>
+        <p data-en="👋 Hi! I'm Néstor, a Full Stack Developer eager to grow, learn, and take on new and exciting challenges. I currently work with Java, Spring Boot, and Angular, developing robust and scalable applications, ensuring code quality and applying best practices. I thrive in agile environments, managing tasks and collaborating actively with my team. I value communication and teamwork, always seeking to improve, take on more responsibility, and contribute to impactful projects. I enjoy working in an environment where everyone rows in the same direction, learning from others, and sharing what I know. I believe leadership is not just about guiding, but also about motivating, supporting, and growing alongside teammates. I'm constantly evolving, striving to improve every day, and I'm open to new opportunities that allow me to grow, take on greater responsibilities, and work on projects that truly make a difference. 🚀" data-es="👋 ¡Hola! Soy Néstor, un desarrollador Full Stack con ganas de crecer, aprender y asumir nuevos y emocionantes retos. Actualmente trabajo con Java, Spring Boot y Angular, desarrollando aplicaciones robustas y escalables, asegurando la calidad del código y aplicando buenas prácticas. Me desenvuelvo bien en entornos ágiles, gestionando tareas y colaborando activamente con mi equipo. Valoro la comunicación y el trabajo en equipo, siempre buscando mejorar, asumir más responsabilidad y contribuir a proyectos con impacto. Disfruto trabajando en un entorno donde todos reman en la misma dirección, aprendiendo de los demás y compartiendo lo que sé. Creo que el liderazgo no es solo guiar, sino también motivar, apoyar y crecer junto a los compañeros. Estoy en constante evolución, esforzándome por mejorar cada día, y abierto a nuevas oportunidades que me permitan crecer, asumir mayores responsabilidades y trabajar en proyectos que realmente marquen la diferencia. 🚀">👋 Hi! I'm Néstor, a Full Stack Developer eager to grow, learn, and take on new an... (line truncated to 2000 chars)
       </div>
 
       <div class="container presentation" data-aos="fade-up" data-aos-delay="100">
 
         <div class="container mt-5">
-          <div class="card p-4 text-center">
+          <div class="card p-4 text-center apple-card">
             <div class="col-lg-4">
             </div>
             <h2 class="text-dark">🌐<span data-en="Full Stack Developer" data-es="Desarrollador Full Stack">Full Stack Developer</span></h2>
@@ -142,126 +158,151 @@
           </div>
         </div>
       </div>
+
+      <div class="floating-stats" id="floating-stats">
+        <div class="stat-bubble" data-speed="0.3">
+          <span class="stat-icon">☕</span>
+          <span class="stat-label" data-en="Coffees" data-es="Cafés">Coffees</span>
+          <span class="stat-number" data-target="999">0</span>
+        </div>
+        <div class="stat-bubble" data-speed="0.5">
+          <span class="stat-icon">💻</span>
+          <span class="stat-label" data-en="Commits" data-es="Commits">Commits</span>
+          <span class="stat-number" data-target="2500">0</span>
+        </div>
+        <div class="stat-bubble" data-speed="0.2">
+          <span class="stat-icon">🐛</span>
+          <span class="stat-label" data-en="Bugs Fixed" data-es="Bugs Arreglados">Bugs Fixed</span>
+          <span class="stat-number" data-target="847">0</span>
+        </div>
+        <div class="stat-bubble" data-speed="0.4">
+          <span class="stat-icon">🚀</span>
+          <span class="stat-label" data-en="Deployments" data-es="Despliegues">Deployments</span>
+          <span class="stat-number" data-target="156">0</span>
+        </div>
+      </div>
     </section>
 
     <section id="skills" class="skills section light-background">
 
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title" data-aos="fade-up" data-text-reveal>
         <h2 data-en="Technologies" data-es="Tecnologías">Technologies</h2>
+        <p data-en="Click on a technology to see it explode!" data-es="¡Haz clic en una tecnología para verla explotar!">Click on a technology to see it explode!</p>
       </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-java-plain colored fs-1"></i><br><b>Java</b></span>
+      <div class="container">
+        <div class="orbit-container">
+          <div class="orbit-ring">
+            <div class="orbit-skill" data-tech="java" data-stagger="0">
+              <div class="orbit-card">
+                <i class="devicon-java-plain colored fs-1"></i>
+                <b>Java</b>
+                <div class="orbit-glow"></div>
+              </div>
+            </div>
+            <div class="orbit-skill" data-tech="spring" data-stagger="1">
+              <div class="orbit-card">
+                <i class="devicon-spring-plain colored fs-1"></i>
+                <b>Spring</b>
+                <div class="orbit-glow"></div>
+              </div>
+            </div>
+            <div class="orbit-skill" data-tech="angular" data-stagger="2">
+              <div class="orbit-card">
+                <i class="devicon-angular-plain colored fs-1"></i>
+                <b>Angular</b>
+                <div class="orbit-glow"></div>
+              </div>
+            </div>
+            <div class="orbit-skill" data-tech="mysql" data-stagger="3">
+              <div class="orbit-card">
+                <i class="devicon-mysql-plain colored fs-1"></i>
+                <b>MySQL</b>
+                <div class="orbit-glow"></div>
+              </div>
+            </div>
+            <div class="orbit-skill" data-tech="git" data-stagger="4">
+              <div class="orbit-card">
+                <i class="devicon-git-plain colored fs-1"></i>
+                <b>Git</b>
+                <div class="orbit-glow"></div>
+              </div>
+            </div>
+            <div class="orbit-skill" data-tech="jenkins" data-stagger="5">
+              <div class="orbit-card">
+                <i class="devicon-jenkins-line colored fs-1"></i>
+                <b>Jenkins</b>
+                <div class="orbit-glow"></div>
+              </div>
             </div>
           </div>
-          
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-spring-plain colored fs-1"></i><br><b>Spring</b></span>
+          <div class="orbit-ring orbit-ring-2">
+            <div class="orbit-skill" data-tech="oracle" data-stagger="6">
+              <div class="orbit-card">
+                <i class="devicon-oracle-plain colored fs-1"></i>
+                <b>Oracle</b>
+                <div class="orbit-glow"></div>
+              </div>
             </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-angular-plain colored fs-1" style="color: red;"></i><br><b>Angular</b></span>
+            <div class="orbit-skill" data-tech="html" data-stagger="7">
+              <div class="orbit-card">
+                <i class="devicon-html5-plain colored fs-1"></i>
+                <b>HTML</b>
+                <div class="orbit-glow"></div>
+              </div>
             </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-mysql-plain colored fs-1"></i><br><b>MySQL</b></span>
+            <div class="orbit-skill" data-tech="css" data-stagger="8">
+              <div class="orbit-card">
+                <i class="devicon-css3-plain colored fs-1"></i>
+                <b>CSS</b>
+                <div class="orbit-glow"></div>
+              </div>
             </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-git-plain colored fs-1"></i><br><b>Git</b></span>
+            <div class="orbit-skill" data-tech="docker" data-stagger="9">
+              <div class="orbit-card">
+                <i class="devicon-docker-plain colored fs-1"></i>
+                <b>Docker</b>
+                <div class="orbit-glow"></div>
+              </div>
             </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-jenkins-line colored fs-1"></i><br><b>Jenkins</b></span>
+            <div class="orbit-skill" data-tech="hibernate" data-stagger="10">
+              <div class="orbit-card">
+                <i class="devicon-hibernate-plain fs-1"></i>
+                <b>Hibernate</b>
+                <div class="orbit-glow"></div>
+              </div>
             </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-oracle-plain colored colored fs-1"></i><br><b>Oracle</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-html5-plain colored fs-1"></i><br><b>HTML</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-css3-plain colored fs-1"></i><br><b>CSS</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-docker-plain colored fs-1"></i><br><b>Microservices</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-sourcetree-plain colored fs-1"></i><br><b>Sourcetree</b></span>
-            </div>
-          </div>
-
-          <div class="col-md-2 col-6 d-flex justify-content-center align-items-center mb-4">
-            <div>
-              <span class="skill d-block text-center"><i
-                  class="devicon-hibernate-plain fs-1"></i><br><b>Hibernate</b></span>
+            <div class="orbit-skill" data-tech="sourcetree" data-stagger="11">
+              <div class="orbit-card">
+                <i class="devicon-sourcetree-plain colored fs-1"></i>
+                <b>Sourcetree</b>
+                <div class="orbit-glow"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <section id="resume" class="resume section">
 
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title" data-aos="fade-up" data-text-reveal>
         <h2 data-en="Professional Experience" data-es="Experiencia Profesional">Professional Experience</h2>
       </div>
 
       <div class="container">
-
         <div class="row">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title" data-en="Professional Experience" data-es="Experiencia Profesional">Professional Experience</h3>
 
-            <div class="resume-item">
+            <div class="resume-item apple-card-3d">
               <h4 data-en="Full Stack Developer" data-es="Desarrollador Full Stack">Full Stack Developer</h4>
               <h5 data-en="Jun 2024 - Present" data-es="Jun 2024 - Actualidad">Jun 2024 - Present</h5>
               <p><em><b>Hiberus Technology</b> | Zaragoza, Spain</em></p>
               <ul>
                 <li><b data-en="Back-end development:" data-es="Desarrollo Back-end:">Back-end development:</b> <span data-en="Development and maintenance of multiple projects, from implementing CRUD functionalities to deploying applications in production." data-es="Desarrollo y mantenimiento de múltiples proyectos, desde la implementación de funcionalidades CRUD hasta el despliegue de aplicaciones en producción.">Development and maintenance of multiple projects, from implementing CRUD functionalities to deploying applications in production.</span></li>
-
                 <li><b data-en="Front-end development:" data-es="Desarrollo Front-end:">Front-end development:</b> <span data-en="Created interactive and responsive interfaces using Angular, HTML, CSS, and TypeScript, optimizing the user experience across different devices." data-es="Creación de interfaces interactivas y responsivas usando Angular, HTML, CSS y TypeScript, optimizando la experiencia de usuario en diferentes dispositivos.">Created interactive and responsive interfaces using Angular, HTML, CSS, and TypeScript, optimizing the user experience across different devices.</span></li>
-
                 <li><b data-en="Database Management:" data-es="Gestión de Bases de Datos:">Database Management:</b> <span data-en="Designed, maintained, and optimized relational databases (PostgreSQL, MySQL), ensuring efficient structures and optimized queries." data-es="Diseño, mantenimiento y optimización de bases de datos relacionales (PostgreSQL, MySQL), asegurando estructuras eficientes y consultas optimizadas.">Designed, maintained, and optimized relational databases (PostgreSQL, MySQL), ensuring efficient structures and optimized queries.</span></li>
               </ul>
             </div>
@@ -270,15 +311,42 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title" data-en="Certifications" data-es="Certificaciones">Certifications</h3>
-            <div class="resume-item">
-              <ul>
-                <li><b data-en="🌐 English:" data-es="🌐 Inglés:">🌐 English:</b> Trinity College London B2+ (178) | 06/2022</li>
-                <li><b>👔 Scrum Master:</b> 150 PDAs – PUE certification | 09/2024</li>
-                <li><b>🧑‍💼 Product Owner:</b> 70 PDAs – PUE certification | 09/2024</li>
-                <li><b>🧑‍💼 Product Owner:</b> 70 PDAs – PUE certification | 09/2024</li>
-                <li><b>☕ 25/0999.014 - Java SE 17 Developer</b> CAS Training | 06/2025</li>
-                <li><b>🤖 GitHub Copilot</b> Hiberus University | 07/2025</li>
-              </ul>
+            <div class="certifications-stack">
+              <div class="cert-card apple-card-3d" data-aos="fade-left" data-aos-delay="100">
+                <div class="cert-icon">🌐</div>
+                <div class="cert-info">
+                  <h5 data-en="English B2+" data-es="Inglés B2+">English B2+</h5>
+                  <p>Trinity College London (178) | 06/2022</p>
+                </div>
+              </div>
+              <div class="cert-card apple-card-3d" data-aos="fade-left" data-aos-delay="200">
+                <div class="cert-icon">👔</div>
+                <div class="cert-info">
+                  <h5>Scrum Master</h5>
+                  <p>150 PDAs – PUE | 09/2024</p>
+                </div>
+              </div>
+              <div class="cert-card apple-card-3d" data-aos="fade-left" data-aos-delay="300">
+                <div class="cert-icon">🧑‍💼</div>
+                <div class="cert-info">
+                  <h5>Product Owner</h5>
+                  <p>70 PDAs – PUE | 09/2024</p>
+                </div>
+              </div>
+              <div class="cert-card apple-card-3d" data-aos="fade-left" data-aos-delay="400">
+                <div class="cert-icon">☕</div>
+                <div class="cert-info">
+                  <h5>Java SE 17 Developer</h5>
+                  <p>CAS Training | 06/2025</p>
+                </div>
+              </div>
+              <div class="cert-card apple-card-3d" data-aos="fade-left" data-aos-delay="500">
+                <div class="cert-icon">🤖</div>
+                <div class="cert-info">
+                  <h5>GitHub Copilot</h5>
+                  <p>Hiberus University | 07/2025</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -287,56 +355,9 @@
 
     </section>
 
-<!--     <section id="portfolio" class="portfolio section light-background">
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Aqui te muestro alguno de los proyectos nacionales y comarcales en los que he trabajado.</p>
-      </div>
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/giboa.png" class="img-fluid" alt="giboa">
-                <div class="portfolio-info">
-                  <h4>GIBOA</h4>
-                  <p>Boletín Oficial de Aragón</p>
-                  <a href="assets/img/portfolio/giboa.png" title="GIBOA" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details/giboa-details.html"  title="Más detalles"
-                    class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-                <div class="portfolio-content h-100">
-                  <img src="assets/img/portfolio/sigpeac.png" class="img-fluid" alt="sigpeac">
-                  <div class="portfolio-info">
-                    <h4>SIGPEAC</h4>
-                    <p>SISTEMA INTEGRADO DEL PROCEDIMIENTO DE EVALUACIÓN Y ACREDITACIÓN DE COMPETENCIAS</p>
-                    <a href="assets/img/portfolio/sigpeac.png" title="SIGPEAC" data-gallery="portfolio-gallery-app"
-                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                    <a href="portfolio-details/sigpeac.html" title="Más detalles"
-                      class="details-link"><i class="bi bi-link-45deg"></i></a>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-
     <section id="contact" class="contact section">
 
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title" data-aos="fade-up" data-text-reveal>
         <h2 data-en="Contact" data-es="Contacto">Contact</h2>
         <p data-en="If you're looking for a developer, don't hesitate to get in touch. <br> I'm ready to contribute and grow within your team 🌐" data-es="Si buscas un desarrollador, no dudes en ponerte en contacto. <br> Estoy listo para contribuir y crecer dentro de tu equipo 🌐">If you're looking for a developer, don't hesitate to get in touch. <br> I'm ready to contribute and grow within your team 🌐
         </p>
@@ -417,12 +438,12 @@
 
   </main>
 
-
-
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
+
+  <div id="click-burst"></div>
 
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/php-email-form/validate.js"></script>
