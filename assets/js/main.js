@@ -395,9 +395,9 @@
     'Git': '#f05032',
     'Jenkins': '#d24939',
     'Oracle': '#f80000',
-    'HTML': '#e34f26',
-    'CSS': '#1572b6',
-    'Microservices': '#2496ed',
+    'Claude Code': '#6B4FBB',
+    'Anthropic': '#D4A574',
+    'Docker': '#2496ed',
     'Sourcetree': '#0052cc',
     'Hibernate': '#59666c'
   };
