@@ -142,7 +142,13 @@ a.cert{display:block;color:inherit}
 .cert .dot{position:absolute;right:16px;top:16px;width:10px;height:10px;border-radius:50%;background:var(--c,var(--amber))}
 
 /* contact */
-.contact{text-align:center}
+.contact{text-align:center;overflow:hidden;min-height:80vh;display:grid;place-items:center}
+/* background loop (MotionSites free "Tech" background), faded into the page at every edge */
+.bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:0;transition:opacity 1.4s}
+.bgv.on{opacity:.55}
+.contact::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(var(--bg),transparent 28%,transparent 72%,var(--bg)),radial-gradient(ellipse 70% 60% at 50% 50%,color-mix(in srgb,var(--bg) 55%,transparent),transparent 75%)}
+:root[data-theme=light] .bgv{filter:invert(1)}
 .contact .big{font-family:var(--display);font-weight:800;font-size:clamp(2rem,6vw,4.6rem);line-height:1.02;letter-spacing:-.03em;max-width:16ch;margin:0 auto 22px}
 .contact p{color:var(--muted);max-width:52ch;margin:0 auto 30px;font-size:1.1rem}
 .contact .btns{justify-content:center}
@@ -357,6 +363,8 @@ html{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
 </section>
 
 <section class="s contact" id="contact">
+  <video class="bgv" id="bgv" muted loop playsinline preload="none" aria-hidden="true"
+    data-src="assets/contact-mesh.mp4"></video>
   <div class="wrap">
     <p class="big" id="big" style="margin-bottom:22px">Let's connect</p>
     <p>I'm always happy to talk about microservices, AI-assisted development and legacy modernization.</p>
@@ -564,6 +572,17 @@ function count(el){
   const to = +el.dataset.to, suf = el.dataset.suf || '', t0 = performance.now(), dur = 1400;
   (function f(n){ const k = clamp((n - t0)/dur); el.textContent = Math.round(to*(1 - Math.pow(1-k,3))) + suf; if (k < 1) requestAnimationFrame(f); })(t0);
 }
+
+/* contact background video: load only when the section gets close, pause it off-screen */
+(() => {
+  const v = $('#bgv'); if (reduce) { v.remove(); return; }
+  v.addEventListener('playing', () => v.classList.add('on'), {once:true});
+  new IntersectionObserver(([e]) => {
+    if (!e.isIntersecting) { v.pause(); return; }
+    if (!v.src) v.src = v.dataset.src;
+    v.play().catch(() => {});
+  }, {rootMargin:'300px 0px'}).observe(v);
+})();
 
 /* marquee */
 const items1 = ['Java','Spring Boot','Python','Angular','Hibernate','Oracle','MySQL'];
