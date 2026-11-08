@@ -140,6 +140,12 @@ a.cert{display:block;color:inherit}
 .cert small{color:var(--muted);display:block;margin-bottom:6px}
 .cert b{font-family:var(--display);font-size:1.2rem;font-weight:500;line-height:1.2;display:block}
 .cert .dot{position:absolute;right:16px;top:16px;width:10px;height:10px;border-radius:50%;background:var(--c,var(--amber))}
+/* featured credential (Claude Partner Badge) */
+.cert.feat{grid-column:span 2;border-color:color-mix(in srgb,var(--c) 60%,transparent);background:linear-gradient(135deg,color-mix(in srgb,var(--c) 16%,var(--surface)),var(--surface) 70%)}
+.cert.feat b{font-size:1.5rem;font-weight:800}
+.cert .pill{display:inline-block;padding:1px 10px;border-radius:99px;font-size:.75rem;font-weight:500;background:var(--c);color:#1A1205}
+.cert .tagline{display:block;margin-top:10px;color:var(--muted);font-size:.92rem;line-height:1.45}
+@media(max-width:600px){.cert.feat{grid-column:auto}}
 
 /* contact */
 .contact{text-align:center;overflow:hidden;min-height:80vh;display:grid;place-items:center}
@@ -175,6 +181,9 @@ footer{position:relative;z-index:1;padding:30px;text-align:center;color:var(--mu
 .portrait.in .tiles i{scale:0;opacity:0;rotate:45deg}
 /* experience */
 .org{display:flex;gap:16px;align-items:center;margin-bottom:38px}
+.tl + .org{margin-top:56px}
+.logo-h.cdfp{background:#0B0B0B;border-color:#262626}.logo-h.cdfp svg{width:66%;height:auto}
+.logo-h.cesur{background:#0A2A5C;border-color:#0A2A5C}.logo-h.cesur svg{width:100%;height:100%}
 .org h3{font-family:var(--display);font-size:1.6rem;line-height:1.1}.org h3 a:hover{color:var(--cyan)}.org p{color:var(--muted);font-size:.95rem}
 .logo-h,.lg{display:grid;place-items:center;font-family:var(--display);font-weight:800;color:var(--c,var(--cyan));overflow:hidden}
 .logo-h{width:58px;height:58px;flex:none;border-radius:14px;background:var(--surface);border:1px solid var(--line);font-size:1.7rem}
@@ -196,7 +205,11 @@ footer{position:relative;z-index:1;padding:30px;text-align:center;color:var(--mu
 .chip svg{width:18px;height:18px;flex:none;fill:var(--c,var(--cyan))}
 .lg{width:auto;min-width:48px;height:48px;padding:0 12px;border-radius:12px;background:color-mix(in srgb,var(--c) 14%,transparent);margin-bottom:14px;font-size:.85rem;width:fit-content}
 .lg svg{width:26px;height:26px;fill:var(--c)}
+/* hiberus "#h": white on a deep-navy to brand-blue glow */
+.logo-h.hib,.lg.hib{border-color:#0A1A6B;background:radial-gradient(130% 95% at 28% 58%,#0035F3 0%,#0A2FD0 30%,#0A1A6B 62%,#050B24 100%)}
+.logo-h.hib svg{width:64%;height:auto;fill:#fff}.lg.hib svg{width:34px;height:auto;fill:#fff}
 .lg[data-icon=scrumalliance]{min-width:84px}.lg[data-icon=scrumalliance] svg{width:60px;height:60px}
+.lg.sm{background:#E9ECF1;min-width:72px;padding:0 8px}.lg.sm svg{width:64px;height:auto}
 .btn:active,.tg:active{transform:scale(.96)!important;transition-duration:.1s}
 .when,.cert small,.stat small,.tags span{letter-spacing:.01em}
 .lg.img{background:#fff;min-width:56px;height:56px;padding:6px}.lg.img img{max-height:100%;max-width:100%;object-fit:contain}
@@ -236,6 +249,8 @@ html{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
 </head>
 <body>
 <div id="bar"></div>
+<!-- hiberus "#h" mark: official "#" (from the #WEAREDIFFERENT claim) + official "h" (from the wordmark) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="hib" viewBox="0 0 554 412"><path transform="translate(0 116) scale(17.619)" d="M2.66353 16.8008L4.75153 0.000780106H7.43953L5.35153 16.8008H2.66353ZM-0.000468716 12.9608V10.3448H15.5035V12.9608H-0.000468716ZM8.87953 16.8008L10.9675 0.000780106H13.6555L11.5915 16.8008H8.87953ZM0.815531 6.45678V3.84078H16.2955L16.3195 6.45678H0.815531Z"/><svg x="322" width="232" height="412" viewBox="0 0 232 412"><path d="M170 220.2C170 202.7 165.2 189.1 155.4 179.4 145.7 169.7 131.9 164.8 114.1 164.9 93.9 164.9 75.5 171.7 58.8 185.4L58.8 381.6C59 389.5 55.9 397.1 50.3 402.7 44.9 408.3 37.5 411.4 29.8 411.3 13.5 411.5 0.2 398.6 0 382.5L0 29.7C-0.2 13.5 12.6 0.3 28.8 0L29.7 0C37.4-0.1 44.9 3 50.2 8.5 55.8 14.1 58.9 21.7 58.7 29.6L58.7 125.4C68.1 121 77.8 117.5 87.8 114.8 97.6 112.1 107.8 110.6 118 110.5 135.1 110.5 149.9 113 162.5 117.9 175.1 122.8 186.6 130.6 197.3 141.3 207.7 151.7 215.6 164.3 220.7 178.1 226.1 193 228.8 208.7 228.7 224.6L228.7 381.4C228.9 397.5 216.1 410.8 200 411.1L199.1 411.1C190.7 411.1 183.8 408.2 178.3 402.5 172.8 396.9 169.8 389.3 170 381.4L170 220.2Z"/></svg></symbol><symbol id="sm" viewBox="0 0 100 60"><clipPath id="smc"><circle cx="58" cy="30" r="24"/></clipPath><g clip-path="url(#smc)"><rect y="6" width="100" height="11" fill="#93A5C8"/><rect y="18" width="100" height="10" fill="#2C3962"/><rect y="31" width="100" height="10" fill="#5574A8"/><rect y="42" width="100" height="12" fill="#7A90BA"/></g><rect x="12" y="18" width="50" height="10" rx="5" fill="#2C3962"/><rect x="12" y="31" width="50" height="10" rx="5" fill="#5574A8"/></symbol></svg>
 <div id="cur" aria-hidden="true"></div>
 
 <nav>
@@ -243,6 +258,7 @@ html{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
     <li><a href="#what">What I do</a></li>
     <li><a href="#stack">Stack</a></li>
     <li><a href="#certs">Certifications</a></li>
@@ -285,8 +301,8 @@ html{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
         <p>🧩 Now also designing skills and agent architectures for AI-driven development projects.</p>
         <div class="stats">
           <div class="stat"><b data-to="2" data-suf="+">0</b><small>years of experience</small></div>
-          <div class="stat"><b data-to="8">0</b><small>certifications</small></div>
-          <div class="stat"><b data-to="3">0</b><small>from Anthropic</small></div>
+          <div class="stat"><b data-to="11">0</b><small>certifications</small></div>
+          <div class="stat"><b data-to="6">0</b><small>from Anthropic</small></div>
         </div>
       </div>
     </div>
@@ -296,10 +312,24 @@ html{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
 <section class="s" id="experience">
   <div class="wrap">
     <h2>Experience</h2>
-    <div class="org"><span class="logo-h" data-img="assets/hiberus.png">h</span><div><h3><a href="https://www.linkedin.com/company/2457666/" target="_blank" rel="noopener">Hiberus</a></h3><p>Full-time · 2 years 8 months<br>Zaragoza, Aragón, Spain · Hybrid</p></div></div>
+    <div class="org"><span class="logo-h hib" role="img" aria-label="hiberus"><svg viewBox="0 0 554 412" aria-hidden="true"><use href="#hib"/></svg></span><div><h3><a href="https://www.linkedin.com/company/2457666/" target="_blank" rel="noopener">Hiberus</a></h3><p>Full-time · 2 years 9 months<br>Zaragoza, Aragón, Spain · Hybrid</p></div></div>
     <ol class="tl" id="tl">
-      <li><span class="pin"></span><div class="tc"><div class="when">Mar 2024 – Jun 2026 · 2 years 4 months</div><h3>Full Stack Software Developer in the Public Sector</h3><p>Participation in the development of various tasks across different projects throughout their entire lifecycle — from requirements gathering and architecture design to implementing business logic, API integration, and production deployment using Java, Spring Boot, and Angular.</p><div class="tags"><span>Angular CLI</span><span>Java</span><span>Spring Boot</span><span>Angular</span></div></div></li>
       <li class="now"><span class="pin"></span><div class="tc"><div class="when">Jun 2026 – Present · 5 months</div><h3>Software Developer | Microservices | AI-Assisted Development</h3><p>Accelerating legacy system migrations using Generative AI for code refactoring, business logic modernization, and automated unit testing.</p><div class="tags"><span>Artificial intelligence</span><span>Microservices</span></div></div></li>
+      <li><span class="pin"></span><div class="tc"><div class="when">Mar 2024 – Jun 2026 · 2 years 4 months</div><h3>Full Stack Software Developer in the Public Sector</h3><p>Participation in the development of various tasks across different projects throughout their entire lifecycle — from requirements gathering and architecture design to implementing business logic, API integration, and production deployment using Java, Spring Boot, and Angular.</p><div class="tags"><span>Angular CLI</span><span>Java</span><span>Spring Boot</span><span>Angular</span></div></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="s" id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <div class="org"><span class="logo-h cdfp" role="img" aria-label="Campus Digital FP"><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#FFC72C" d="M30 14H62L52 48 34 84 22 46Z"/><path fill="#F39C12" d="M62 14 70 12 82 40 70 86 52 48Z"/><path fill="#FFB000" d="M52 48 70 86 34 84Z"/></svg></span><div><h3>Campus Digital FP</h3><p>Currently studying</p></div></div>
+    <ol class="tl">
+      <li class="now"><span class="pin"></span><div class="tc"><div class="when">Oct 2026 – Present</div><h3>Master in Artificial Intelligence &amp; Big Data</h3><div class="tags"><span>Artificial intelligence</span><span>Big Data</span></div></div></li>
+    </ol>
+    <div class="org"><span class="logo-h cesur" role="img" aria-label="Cesur"><svg viewBox="0 0 100 100" aria-hidden="true"><text x="50" y="54" text-anchor="middle" textLength="80" lengthAdjust="spacingAndGlyphs" font-family="Montserrat,'Arial Black',Arial,sans-serif" font-weight="800" font-size="27" fill="#fff">CESUR</text><text x="50" y="70" text-anchor="middle" textLength="80" lengthAdjust="spacingAndGlyphs" font-family="Montserrat,Arial,sans-serif" font-weight="700" font-size="9.5" fill="#F7C600">Tu Centro Oficial de FP</text></svg></span><div><h3>Cesur</h3><p>Completed</p></div></div>
+    <ol class="tl">
+      <li><span class="pin"></span><div class="tc"><div class="when">Sep 2022 – Jun 2024</div><h3>Higher Degree in Multi-Platform Application Development</h3><p>Computer Programming</p><div class="tags"><span>Multi-platform development</span><span>Programming</span></div></div></li>
     </ol>
   </div>
 </section>
@@ -350,13 +380,16 @@ html{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
   <div class="wrap">
     <h2>Certifications</h2>
     <div class="certs">
+      <a class="cert feat" href="https://www.credly.com/badges/e4e16883-83c3-4e5e-bddf-422f3bb7538e/linked_in_profile" target="_blank" rel="noopener" style="--c:#FF9B6B"><span class="lg" data-icon="anthropic" data-img="assets/anthropic.png"></span><small>Anthropic · <span class="pill">Partner badge</span></small><b>Claude Partner Badge — Claude Code</b><span class="tagline">Scoping, deploying, configuring and running Claude Code end-to-end for clients · 8 courses + capstone assessment · Valid until May 2027</span></a>
       <a class="cert" href="https://verify.skilljar.com/c/rqpo78rz9gee" target="_blank" rel="noopener" style="--c:#FF9B6B"><span class="lg" data-icon="anthropic" data-img="assets/anthropic.png"></span><small>Anthropic</small><b>Model Context Protocol: Advanced Topics</b></a>
       <a class="cert" href="https://verify.skilljar.com/c/4j3kgzim5gtk" target="_blank" rel="noopener" style="--c:#FF9B6B"><span class="lg" data-icon="anthropic" data-img="assets/anthropic.png"></span><small>Anthropic</small><b>Claude Code in Action</b></a>
       <a class="cert" href="https://verify.skilljar.com/c/wwackuab3hss" target="_blank" rel="noopener" style="--c:#FF9B6B"><span class="lg" data-icon="anthropic" data-img="assets/anthropic.png"></span><small>Anthropic</small><b>Building with the Claude API</b></a>
-      <div class="cert" style="--c:var(--cyan)"><span class="lg" data-txt="hiberus" data-img="assets/hiberus.png"></span><small>Hiberus</small><b>GitHub Copilot</b></div>
+      <a class="cert" href="https://verify.skilljar.com/c/p5c2c3j27cx6" target="_blank" rel="noopener" style="--c:#FF9B6B"><span class="lg" data-icon="anthropic" data-img="assets/anthropic.png"></span><small>Anthropic</small><b>AI Capabilities and Limitations</b></a>
+      <a class="cert" href="https://verify.skilljar.com/c/43jb8ggdd27y" target="_blank" rel="noopener" style="--c:#FF9B6B"><span class="lg" data-icon="anthropic" data-img="assets/anthropic.png"></span><small>Anthropic</small><b>AI Fluency for Builders</b></a>
+      <div class="cert" style="--c:var(--cyan)"><span class="lg hib" role="img" aria-label="hiberus"><svg viewBox="0 0 554 412" aria-hidden="true"><use href="#hib"/></svg></span><small>Hiberus</small><b>GitHub Copilot</b></div>
       <div class="cert" style="--c:#C74634"><span class="lg" data-txt="Oracle" data-img="assets/oracle.png"></span><small>Oracle</small><b>Java SE 17</b></div>
-      <a class="cert" href="https://scrummanager.com/website/c/profile/member.php?id=50197" target="_blank" rel="noopener" style="--c:var(--amber)"><span class="lg" data-icon="sprint"></span><small>Scrum Manager</small><b>Certified Scrum Product Owner®</b></a>
-      <a class="cert" href="https://scrummanager.com/website/c/profile/member.php?id=50197" target="_blank" rel="noopener" style="--c:var(--amber)"><span class="lg" data-icon="sprint"></span><small>Scrum Manager</small><b>Agile Scrum Master</b></a>
+      <a class="cert" href="https://scrummanager.com/website/c/profile/member.php?id=50197" target="_blank" rel="noopener" style="--c:var(--amber)"><span class="lg sm" role="img" aria-label="Scrum Manager"><svg viewBox="0 0 100 60" aria-hidden="true"><use href="#sm"/></svg></span><small>Scrum Manager</small><b>Certified Scrum Product Owner®</b></a>
+      <a class="cert" href="https://scrummanager.com/website/c/profile/member.php?id=50197" target="_blank" rel="noopener" style="--c:var(--amber)"><span class="lg sm" role="img" aria-label="Scrum Manager"><svg viewBox="0 0 100 60" aria-hidden="true"><use href="#sm"/></svg></span><small>Scrum Manager</small><b>Agile Scrum Master</b></a>
       <div class="cert" style="--c:#4CC9F0"><span class="lg" data-txt="Trinity" data-img="assets/trinity.png"></span><small>Trinity</small><b>English B2</b></div>
     </div>
   </div>
@@ -516,7 +549,7 @@ const lit = $('#lit'), portrait = $('#portrait');
 const words = $$('.w', lit);
 const navLinks = $$('nav ul a'), secs = navLinks.map(a => $(a.getAttribute('href')));
 
-const tl = $('#tl'), tlis = $$('#tl li');
+const tls = $$('.tl');
 function onScroll(){
   const y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
   bar.style.transform = `scaleX(${max > 0 ? y/max : 0})`;
@@ -529,9 +562,9 @@ function onScroll(){
   // words
   const r = lit.getBoundingClientRect(), p = clamp((innerHeight*.85 - r.top)/(r.height + innerHeight*.25));
   words.forEach((w,i) => w.classList.toggle('on', i/words.length < p*1.08));
-  const tr = tl.getBoundingClientRect();
-  tl.style.setProperty('--tp', clamp((innerHeight*.62 - tr.top)/tr.height));
-  tlis.forEach(li => li.classList.toggle('on', li.getBoundingClientRect().top < innerHeight*.62));
+  tls.forEach(tl => { const tr = tl.getBoundingClientRect();
+    tl.style.setProperty('--tp', clamp((innerHeight*.62 - tr.top)/tr.height));
+    $$('li', tl).forEach(li => li.classList.toggle('on', li.getBoundingClientRect().top < innerHeight*.62)); });
   // portrait parallax inside its frame
   if (!reduce) { const pr = portrait.getBoundingClientRect();
     portrait.style.setProperty('--py', clamp((innerHeight/2 - pr.top - pr.height/2)/innerHeight, -1, 1)*18 + 'px'); }
@@ -638,7 +671,7 @@ const ICONS={"sprint":"M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 
 const svg = k => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${ICONS[k]}"/></svg>`;
 const CHIPICON = {'Java':'openjdk','Spring Boot':'springboot','Python':'python','Angular':'angular','Hibernate':'hibernate','MySQL':'mysql','Docker':'docker','Jenkins':'jenkins','Git':'git','GitHub':'github','Claude Code':'claude','GitHub Copilot':'githubcopilot','MCP':'modelcontextprotocol'};
 $$('.chip').forEach(c => { const k = CHIPICON[c.textContent.trim()]; if (k) c.querySelector('i').outerHTML = svg(k); });
-$$('.lg').forEach(l => { l.innerHTML = l.dataset.icon ? svg(l.dataset.icon) : (l.dataset.txt || ''); });
+$$('.lg').forEach(l => { if (l.dataset.icon || l.dataset.txt) l.innerHTML = l.dataset.icon ? svg(l.dataset.icon) : l.dataset.txt; });
 // optional real logo files: drop e.g. assets/hiberus.png or assets/oracle.png and they replace the placeholder
 $$('[data-img]').forEach(el => { const srcs = el.dataset.img.split(' ');
   (function next(i){ if (i >= srcs.length) return; const im = new Image(); im.alt = '';
